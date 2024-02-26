@@ -67,9 +67,85 @@ if (typeof a !== "number" || typeof b !== "number"){
   //  console.log ('hello');
     //return 'hei';
 //}
-const aku = {
-    nama : 'andri',
-    hobi : 'membaca',
-    kenalan : function(){
-    return `aku${this.nama}. Hobi saya ${this.hobi}.`}
+//const aku = {
+ //   nama : 'andri',
+ //   hobi : 'membaca',
+   // kenalan : function(){
+   // return `aku${this.nama}. Hobi saya ${this.hobi}.`}
+//}
+//const angka = [1,2.3,4,5,6,7,8,9];
+
+const anime =[
+{ title : ' attack on titan',
+rating : 90},
+{ title : 'coban',
+rating : 89},
+{title : 'bleach',
+rating : 82},
+{title : 'hunter',
+rating : 62}
+]
+anime.forEach(function(anime){
+  console.log(`${anime.title}- ${anime.rating}/100`)
 }
+)
+
+
+const angka = [1,2,3,4,5,6,7,8,9];
+const angkaDouble = angka.map(function(num)
+{return num * 3});
+
+const animeList =anime.map(function(anime)
+{return anime.title.toLowerCase()})
+function pangkat (x){
+  return x * x
+}
+const hasil = function(a){
+  return a * a;
+}
+const random = () => (
+  Math.floor(Math.random()*100)
+)
+const add = (a,b) =>a*b
+console.log('haloo');
+setTimeout(()=>{
+  console.log('masih disana gak?');
+},5000)
+console.log('saya tunggu ya')
+const angkaGanjil = angka.filter(n => {
+  return n%2 ===1 ;
+})
+const angkaBaru = angka.filter(n =>{
+  return n > 5 ;
+} )
+const angkaGenap = angka.filter (n =>{
+  return n%2 ===2;
+})
+const examScore =[ 85,76,86,90,92,99]
+const isGraduated = examScore.every((score)=> score >= 70);
+const subTotal = [100,300,400,500,600]
+const total = subTotal.reduce((currentTotal, singleTotal) =>{
+  return currentTotal+singleTotal
+})
+let totals = 0;
+for (let score of examScore){
+  totals += score 
+}
+function lemparDadu(sisi =6){
+  return Math.floor(Math.random()* sisi)+1;
+}
+const angka1 = [1,2,3,4,5,6,7,8,9]
+Math.max(angka1)
+Math.max(...angka1)
+const angka2 = [1,2,3,4,5,]
+const nama2 = ['alex','badu','cindy','eko','albert']
+const campuran = [...angka2,...nama2,...angka2];
+const user2 = {
+  name : 'andri',
+  email : 'yandri@gmail.com'
+  role: 'admin'
+}
+const userBaru = {...user2,id:234,pasword:'kata sandi'}
+const peserta1 = ['Batman ', 'superman','superboy']
+const [satu,dua,tiga] = peserta1
+
